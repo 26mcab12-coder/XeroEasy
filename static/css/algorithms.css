@@ -1,0 +1,215 @@
+.algorithm-page {
+    min-height: 100vh;
+    background: #f6f8f7;
+    color: #172126;
+}
+
+.algorithm-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px max(24px, calc((100% - 1160px) / 2));
+    border-bottom: 1px solid #e3e9e7;
+    background: #fff;
+}
+
+.algorithm-brand,
+.algorithm-home-link {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.algorithm-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.algorithm-brand .brand-mark {
+    display: grid;
+    width: 32px;
+    height: 32px;
+    place-items: center;
+    border-radius: 9px;
+    background: #d9362f;
+    color: #fff;
+}
+
+.algorithm-home-link {
+    color: #b42c26;
+}
+
+.algorithm-main {
+    width: min(1160px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 52px 0 72px;
+}
+
+.algorithm-hero {
+    max-width: 720px;
+    margin-bottom: 32px;
+}
+
+.algorithm-hero h1 {
+    margin: 8px 0 12px;
+    font-size: clamp(34px, 5vw, 52px);
+    letter-spacing: -2px;
+}
+
+.algorithm-hero h1 span {
+    color: #d9362f;
+}
+
+.algorithm-hero > p:not(.eyebrow) {
+    max-width: 660px;
+    color: #65716f;
+    line-height: 1.7;
+}
+
+.algorithm-order-input,
+.expression-input {
+    display: grid;
+    gap: 8px;
+    width: min(100%, 300px);
+    margin-top: 22px;
+    color: #53605e;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.algorithm-order-input input,
+.expression-input input {
+    min-height: 42px;
+    padding: 9px 12px;
+    border: 1px solid #dce3e1;
+    border-radius: 8px;
+    background: #fff;
+    color: #172126;
+    font: inherit;
+}
+
+.algorithm-phases {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.algorithm-phase {
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid #e1e8e6;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 8px 28px rgba(23, 33, 38, .04);
+}
+
+.phase-heading span {
+    color: #d9362f;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.phase-heading h2 {
+    margin: 7px 0 0;
+    font-size: 22px;
+}
+
+.algorithm-phase > p {
+    min-height: 48px;
+    color: #65716f;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.algorithm-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.algorithm-buttons button {
+    min-height: 36px;
+    padding: 8px 12px;
+    border: 1px solid #f0c9c6;
+    border-radius: 7px;
+    background: #fff8f7;
+    color: #9e2924;
+    cursor: pointer;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.algorithm-buttons button:hover:not(:disabled) {
+    background: #fce9e7;
+}
+
+.algorithm-buttons button:disabled {
+    cursor: wait;
+    opacity: .6;
+}
+
+.algorithm-phase .expression-input {
+    width: 100%;
+}
+
+.algorithm-output {
+    max-height: 340px;
+    min-height: 92px;
+    overflow: auto;
+    margin: 18px 0 0;
+    padding: 14px;
+    border: 1px solid #e6ebe9;
+    border-radius: 8px;
+    background: #f7f9f8;
+    color: #263431;
+    font: 12px/1.6 Consolas, "Courier New", monospace;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.algorithm-portal-link {
+    color: #b42c26;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.algorithm-portal-link:hover,
+.algorithm-home-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+    .algorithm-phases {
+        grid-template-columns: 1fr;
+    }
+
+    .algorithm-phase > p {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .algorithm-header {
+        padding: 14px 16px;
+    }
+
+    .algorithm-main {
+        width: calc(100% - 28px);
+        padding-top: 32px;
+    }
+
+    .algorithm-home-link {
+        max-width: 130px;
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .algorithm-phase {
+        padding: 18px;
+    }
+}

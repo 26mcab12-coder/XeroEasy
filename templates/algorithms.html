@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XeroEasy | Data structures and algorithms</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/algorithms.css') }}">
+</head>
+<body class="algorithm-page">
+    <header class="algorithm-header">
+        <a class="algorithm-brand" href="{{ url_for('home') }}"><span class="brand-mark">x</span> XeroEasy</a>
+        <a class="algorithm-home-link" href="{{ url_for('home') }}">Back to the copy centre</a>
+    </header>
+
+    <main class="algorithm-main">
+        <section class="algorithm-hero">
+            <p class="eyebrow">PROJECT DSA WORKFLOW</p>
+            <h1>Data structures, <span>put to work.</span></h1>
+            <p>Explore the structures and algorithms used to organize and process XeroEasy print orders. Run each demonstration and inspect its output and complexity.</p>
+            <label class="algorithm-order-input" for="algorithm-order-id">
+                Search order ID
+                <input id="algorithm-order-id" type="number" value="30" min="1" step="1">
+            </label>
+        </section>
+
+        <div class="algorithm-phases">
+            <section class="algorithm-phase">
+                <div class="phase-heading"><span>PHASE 01</span><h2>Linear data structures</h2></div>
+                <p>Store and update orders in a linked list, process work FIFO, manage actions LIFO, and evaluate a postfix expression with a stack.</p>
+                <div class="algorithm-buttons">
+                    <button data-demo="linked-list">Linked list operations</button>
+                    <button data-demo="queue-stack">Linked queue and stack</button>
+                    <button data-demo="postfix-stack">Evaluate postfix expression</button>
+                </div>
+                <label class="expression-input" for="postfix-expression">Postfix expression (space-separated)
+                    <input id="postfix-expression" type="text" value="5 3 + 2 *" autocomplete="off">
+                </label>
+                <pre class="algorithm-output" data-output="phase-1" aria-live="polite">Run a Phase 1 demo to see its output.</pre>
+            </section>
+
+            <section class="algorithm-phase">
+                <div class="phase-heading"><span>PHASE 02</span><h2>Trees and graphs</h2></div>
+                <p>Store structured data in a binary tree, organize orders in a binary search tree, and traverse campus services using BFS and DFS graph searches.</p>
+                <div class="algorithm-buttons">
+                    <button data-demo="binary-tree">Binary tree structured storage</button>
+                    <button data-demo="bst">BST traversals and search</button>
+                    <button data-demo="graph-bfs">Graph breadth-first search</button>
+                    <button data-demo="graph-dfs">Graph depth-first search</button>
+                </div>
+                <pre class="algorithm-output" data-output="phase-2" aria-live="polite">Run a Phase 2 demo to see its output.</pre>
+            </section>
+
+            <section class="algorithm-phase">
+                <div class="phase-heading"><span>PHASE 03</span><h2>Searching and sorting</h2></div>
+                <p>Find orders and compare insertion, merge, and quick sort; also order print jobs by copy count.</p>
+                <div class="algorithm-buttons">
+                    <button data-demo="linear-search">Linear search</button>
+                    <button data-demo="binary-search">Binary search</button>
+                    <button data-demo="insertion-sort">Insertion sort</button>
+                    <button data-demo="merge-sort">Merge sort</button>
+                    <button data-demo="quick-sort">Quick sort</button>
+                    <button data-demo="copy-sort">Sort by copies</button>
+                    <button data-demo="sorting-comparison">Compare sorting methods</button>
+                </div>
+                <pre class="algorithm-output" data-output="phase-3" aria-live="polite">Run a Phase 3 demo to see its output.</pre>
+            </section>
+
+            <section class="algorithm-phase">
+                <div class="phase-heading"><span>PHASE 04</span><h2>Algorithmic problem solving</h2></div>
+                <p>Prioritize print orders greedily, optimize work with dynamic programming, and explore possible schedules through backtracking.</p>
+                <div class="algorithm-buttons">
+                    <button data-demo="greedy">Greedy priority scheduling</button>
+                    <button data-demo="dynamic-programming">Dynamic programming</button>
+                    <button data-demo="backtracking">Backtracking schedules</button>
+                </div>
+                <pre class="algorithm-output" data-output="phase-4" aria-live="polite">Run a Phase 4 demo to see its output.</pre>
+            </section>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='js/algorithms.js') }}"></script>
+</body>
+</html>
